@@ -7,7 +7,7 @@ def mask_account_card(card_info: str) -> str:
             card_number_info += info
         else:
             type_info += info
-    card_number_type = ""
+
     from masks import get_mask_card_number, get_mask_account
 
     if len(card_number_info) <= 16:
