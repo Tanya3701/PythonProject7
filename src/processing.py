@@ -1,4 +1,4 @@
-def filter_by_state(list_state_info: list, state_info = "EXECUTED") -> list:
+def filter_by_state(list_state_info: list, state_info: str = "EXECUTED") -> list:
 
     """ Фильтр словарей по статусу """
 
@@ -9,7 +9,7 @@ def filter_by_state(list_state_info: list, state_info = "EXECUTED") -> list:
     return new_list_info
 
 
-def sort_by_date(list_state_info: list, sorting_reverse: bool = True ) -> list:
+def sort_by_date(list_state_info: list, sorting_reverse: bool = True) -> list:
 
     """ Сортирует по дате (по умолчанию на убывание)"""
 
