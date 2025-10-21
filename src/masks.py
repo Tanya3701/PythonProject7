@@ -21,8 +21,11 @@ def get_mask_card_number(card_number: str) -> str:
         )
 
 
-def get_mask_account(account: int) -> str:
+def get_mask_account(account: str) -> str:
     """Маскирует часть банковского счета"""
-    account_list = list(str(account))
-    account_list[:-4] = "**"
-    return "".join(account_list)
+    if len(account) != 20:
+        raise ValueError("Неверный счет")
+    else:
+        account_list = list(account)
+        account_list[:-4] = "**"
+        return "".join(account_list)
