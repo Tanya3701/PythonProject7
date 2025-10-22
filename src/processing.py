@@ -16,6 +16,6 @@ def sort_by_date(
     """Сортирует по дате (по умолчанию на убывание)"""
 
     sort_by_date_list = sorted(
-        list_state_info, key=lambda info: info["date"], reverse=sorting_reverse
+        list_state_info, key=lambda info: info.get("date"), reverse=sorting_reverse
     )
     return sort_by_date_list
