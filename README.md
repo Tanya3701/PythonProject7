@@ -70,3 +70,10 @@ get_mask_card_number
   
 Язык разработки: Python 3.13.7
 
+
+# Code coverage
+
+![img_2.png](img_2.png)
+
+
+
