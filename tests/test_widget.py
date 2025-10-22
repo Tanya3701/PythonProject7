@@ -1,6 +1,6 @@
 import pytest
 
-from widget import mask_account_card, get_date
+from src.widget import mask_account_card, get_date
 
 
 @pytest.mark.parametrize("card_info, expected", [('Maestro 1596837868705199', 'Maestro 1596 83** **** 5199'),
@@ -24,6 +24,22 @@ def test_mask_invalid_account_card():
         mask_account_card("")
         mask_account_card("1234")
         mask_account_card("123456789123456789123456789123456")
+
+
+@pytest.mark.parametrize('full_date, expected', [("2024-03-11T02:26:18.671407", "11.03.2024"),
+                                                 ("2025-12-05T02:26:18.671407", "05.12.2025"),
+                                                 ("2025-04-01", "01.04.2025")])
+
+def test_get_date(full_date, expected):
+    assert get_date(full_date) == expected
+
+
+
+
+
+
+
+
 
 
 

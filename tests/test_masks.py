@@ -21,6 +21,7 @@ def test_get_mask_card_number_invalid_card_number() -> None:
     with pytest.raises(ValueError):
         get_mask_card_number("")
         get_mask_card_number("68319824767376589")
+        get_mask_card_number("6831")
 
 
 @pytest.mark.parametrize(
