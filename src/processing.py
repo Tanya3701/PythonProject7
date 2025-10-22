@@ -5,7 +5,7 @@ def filter_by_state(
 
     new_list_info = []
     for info in list_state_info:
-        if info["state"] == state_info:
+        if info.get("state") == state_info:
             new_list_info.append(info)
     return new_list_info
 

@@ -43,3 +43,5 @@ def test_get_mask_invalid_account() -> None:
         get_mask_account("")
         get_mask_account("73654108430135874305")
         get_mask_account("3538303")
+
+
