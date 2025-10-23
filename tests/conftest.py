@@ -1,6 +1,5 @@
 import pytest
 
-
 @pytest.fixture
 def fixture_card_numbers() -> list:
     return [
