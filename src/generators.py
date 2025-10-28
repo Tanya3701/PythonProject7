@@ -1,3 +1,4 @@
+from typing import Any
 transactions = [
         {
             "id": 939719570,
@@ -76,7 +77,7 @@ transactions = [
         }
     ]
 
-def filter_by_currency(transactions_some, currency):
+def filter_by_currency(transactions_some: list[dict], currency: str) -> list[dict]:
     """Функция фильтра данных по видам валюты"""
     code_list = []
     for transaction in transactions_some:
@@ -86,9 +87,36 @@ def filter_by_currency(transactions_some, currency):
     return code_list
 
 
-def transaction_descriptions(transactions_some):
+def transaction_descriptions(transactions_some: list[dict]):
     """Генератор возвращает тип операции"""
     for transaction in transactions_some:
         description = transaction.get("description")
         yield description
+
+
+def card_number_generator(start: int, end: int) -> Any:
+    """Генерирует номера карт"""
+    z = start
+    x = 10000000000000001
+    while z <= end :
+        yield f"{str(x)[1:5]} {str(x)[5:9]} {str(x)[9:13]} {str(x)[13:17]}"
+        x += 1
+        z += 1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
