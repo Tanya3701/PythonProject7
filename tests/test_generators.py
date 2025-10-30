@@ -26,7 +26,6 @@ def test_filter_by_currency() -> None:
         }
 
 
-
 def test_filter_by_no_currency(fixture_filter_by_currency_usd):
     """Тест на отсутствие заданной валюты"""
     currency_rub = filter_by_currency(fixture_filter_by_currency_usd, "RUB")

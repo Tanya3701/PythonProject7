@@ -66,15 +66,10 @@ transactions = [
 
 def filter_by_currency(transactions_some: list[dict], currency: str) -> list[dict]:
     """Функция фильтра данных по видам валюты"""
-    code_list = []
     for transaction in transactions_some:
         key_operation = transaction.get("operationAmount").get("currency").get("code")
         if key_operation == currency:
             yield transaction
-
-
-
-
 
 
 def transaction_descriptions(transactions_some: list[dict]):
