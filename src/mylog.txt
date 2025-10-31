@@ -1,0 +1,23 @@
+my_function:okmy_function:okmy_function:okmy_function:okmy_function:okmy_function:okmy_function:okmy_function:okmy_function:okmy_function:ok
+my_function:error
+my_function:ok
+my_function:error
+my_function:ok
+my_function:error
+my_function:ok
+my_function:error
+my_function:ok
+my_function:ok
+my_function:ok
+my_function:ok
+my_function:ok
+my_function:ok
+my_function:ok
+my_function:ok
+my_function:error can't multiply sequence by non-int of type 'str' Inputs: ('1', '2') {}
+my_function:ok 2
+my_function:ok 2
+my_function:ok 2
+my_function:error can't multiply sequence by non-int of type 'str' Inputs: ('1', '2') {}
+my_function error: can't multiply sequence by non-int of type 'str' Inputs: ('1', '2') {}
+my_function:ok Вывод: 0.5
