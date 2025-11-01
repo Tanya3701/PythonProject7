@@ -64,7 +64,7 @@ transactions = [
 ]
 
 
-def filter_by_currency(transactions_some: list[dict], currency: str) -> list[dict]:
+def filter_by_currency(transactions_some: list[dict], currency: str) -> Any:
     """Функция фильтра данных по видам валюты"""
     for transaction in transactions_some:
         key_operation = transaction.get("operationAmount").get("currency").get("code")
@@ -72,7 +72,7 @@ def filter_by_currency(transactions_some: list[dict], currency: str) -> list[dic
             yield transaction
 
 
-def transaction_descriptions(transactions_some: list[dict]):
+def transaction_descriptions(transactions_some: list[dict]) -> Any:
     """Генератор возвращает тип операции"""
     for transaction in transactions_some:
         description = transaction.get("description")
