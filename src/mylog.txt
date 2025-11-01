@@ -21,3 +21,5 @@ my_function:ok 2
 my_function:error can't multiply sequence by non-int of type 'str' Inputs: ('1', '2') {}
 my_function error: can't multiply sequence by non-int of type 'str' Inputs: ('1', '2') {}
 my_function:ok Вывод: 0.5
+my_function error: division by zero Inputs: (1, 0) {}
+my_function:ok Вывод: 0.5

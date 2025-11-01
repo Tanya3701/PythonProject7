@@ -21,10 +21,10 @@ def log(filename=None):
     return decorator
 
 
-@log(filename='mylog.txt')
+@log()
 def my_function(x, y):
     return x / y
 
-print(my_function(1, 2))
+print(my_function(1, 1))
 
 
