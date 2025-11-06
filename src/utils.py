@@ -1,7 +1,7 @@
 import json
 from typing import Any
 
-def json_read_file(json_file) -> Any:
+def json_read_file(json_file) -> list[dict]:
     """Преобразует Json файл в список"""
     try:
         with open(json_file, "r", encoding="utf-8") as file:
@@ -12,3 +12,5 @@ def json_read_file(json_file) -> Any:
     except FileNotFoundError:
         operations = []
     return operations
+
+
