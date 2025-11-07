@@ -1,6 +1,6 @@
+from unittest.mock import mock_open, patch
+
 from src.utils import json_read_file
-from unittest.mock import mock_open
-from unittest.mock import patch
 
 
 @patch("builtins.open", new_callable=mock_open, read_data='{"key": "value"}')
