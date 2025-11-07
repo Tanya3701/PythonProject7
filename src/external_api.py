@@ -9,6 +9,7 @@ url = "https://api.apilayer.com/exchangerates_data/convert"
 
 header = {'apikey': API_KEY}
 
+
 def currency_conversion(operations: list[dict]) -> str:
     """Выводит сумму оборота транзакции, в случае, транзакции в евро и долларах, конвертирует результат в рубли"""
     for operation in operations:
