@@ -60,12 +60,12 @@
             <button type="button" class="exc show_exc button_toggle_exc" value="exc" data-shortcut="x" title="Toggle lines excluded">0<span class="text"> excluded</span></button>
         </h2>
         <p class="text">
-            <a id="prevFileLink" class="nav" href="z_145eef247bfb46b6_decorators_py.html">&#xab; prev</a> &nbsp; &nbsp;
+            <a id="prevFileLink" class="nav" href="z_145eef247bfb46b6_external_api_py.html">&#xab; prev</a> &nbsp; &nbsp;
             <a id="indexLink" class="nav" href="index.html">&Hat; index</a> &nbsp; &nbsp;
             <a id="nextFileLink" class="nav" href="z_145eef247bfb46b6_masks_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.11.0">coverage.py v7.11.0</a>,
-            created at 2025-11-01 20:24 +0500
+            created at 2025-11-08 14:21 +0500
         </p>
         <aside class="hidden">
             <button type="button" class="button_next_chunk" data-shortcut="j"></button>
@@ -146,7 +146,7 @@
     <p class="run run2"><span class="n"><a id="t64" href="#t64">64</a></span><span class="t"><span class="op">]</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t65" href="#t65">65</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t66" href="#t66">66</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t67" href="#t67">67</a></span><span class="t"><span class="key">def</span> <span class="nam">filter_by_currency</span><span class="op">(</span><span class="nam">transactions_some</span><span class="op">:</span> <span class="nam">list</span><span class="op">[</span><span class="nam">dict</span><span class="op">]</span><span class="op">,</span> <span class="nam">currency</span><span class="op">:</span> <span class="nam">str</span><span class="op">)</span> <span class="op">-></span> <span class="nam">list</span><span class="op">[</span><span class="nam">dict</span><span class="op">]</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t67" href="#t67">67</a></span><span class="t"><span class="key">def</span> <span class="nam">filter_by_currency</span><span class="op">(</span><span class="nam">transactions_some</span><span class="op">:</span> <span class="nam">list</span><span class="op">[</span><span class="nam">dict</span><span class="op">]</span><span class="op">,</span> <span class="nam">currency</span><span class="op">:</span> <span class="nam">str</span><span class="op">)</span> <span class="op">-></span> <span class="nam">Any</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t68" href="#t68">68</a></span><span class="t">    <span class="str">"""&#1060;&#1091;&#1085;&#1082;&#1094;&#1080;&#1103; &#1092;&#1080;&#1083;&#1100;&#1090;&#1088;&#1072; &#1076;&#1072;&#1085;&#1085;&#1099;&#1093; &#1087;&#1086; &#1074;&#1080;&#1076;&#1072;&#1084; &#1074;&#1072;&#1083;&#1102;&#1090;&#1099;"""</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t69" href="#t69">69</a></span><span class="t">    <span class="key">for</span> <span class="nam">transaction</span> <span class="key">in</span> <span class="nam">transactions_some</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t70" href="#t70">70</a></span><span class="t">        <span class="nam">key_operation</span> <span class="op">=</span> <span class="nam">transaction</span><span class="op">.</span><span class="nam">get</span><span class="op">(</span><span class="str">"operationAmount"</span><span class="op">)</span><span class="op">.</span><span class="nam">get</span><span class="op">(</span><span class="str">"currency"</span><span class="op">)</span><span class="op">.</span><span class="nam">get</span><span class="op">(</span><span class="str">"code"</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
@@ -154,7 +154,7 @@
     <p class="run"><span class="n"><a id="t72" href="#t72">72</a></span><span class="t">            <span class="key">yield</span> <span class="nam">transaction</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t73" href="#t73">73</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t74" href="#t74">74</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t75" href="#t75">75</a></span><span class="t"><span class="key">def</span> <span class="nam">transaction_descriptions</span><span class="op">(</span><span class="nam">transactions_some</span><span class="op">:</span> <span class="nam">list</span><span class="op">[</span><span class="nam">dict</span><span class="op">]</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t75" href="#t75">75</a></span><span class="t"><span class="key">def</span> <span class="nam">transaction_descriptions</span><span class="op">(</span><span class="nam">transactions_some</span><span class="op">:</span> <span class="nam">list</span><span class="op">[</span><span class="nam">dict</span><span class="op">]</span><span class="op">)</span> <span class="op">-></span> <span class="nam">Any</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t76" href="#t76">76</a></span><span class="t">    <span class="str">"""&#1043;&#1077;&#1085;&#1077;&#1088;&#1072;&#1090;&#1086;&#1088; &#1074;&#1086;&#1079;&#1074;&#1088;&#1072;&#1097;&#1072;&#1077;&#1090; &#1090;&#1080;&#1087; &#1086;&#1087;&#1077;&#1088;&#1072;&#1094;&#1080;&#1080;"""</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t77" href="#t77">77</a></span><span class="t">    <span class="key">for</span> <span class="nam">transaction</span> <span class="key">in</span> <span class="nam">transactions_some</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t78" href="#t78">78</a></span><span class="t">        <span class="nam">description</span> <span class="op">=</span> <span class="nam">transaction</span><span class="op">.</span><span class="nam">get</span><span class="op">(</span><span class="str">"description"</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
@@ -176,12 +176,12 @@
 <footer>
     <div class="content">
         <p>
-            <a class="nav" href="z_145eef247bfb46b6_decorators_py.html">&#xab; prev</a> &nbsp; &nbsp;
+            <a class="nav" href="z_145eef247bfb46b6_external_api_py.html">&#xab; prev</a> &nbsp; &nbsp;
             <a class="nav" href="index.html">&Hat; index</a> &nbsp; &nbsp;
             <a class="nav" href="z_145eef247bfb46b6_masks_py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.11.0">coverage.py v7.11.0</a>,
-            created at 2025-11-01 20:24 +0500
+            created at 2025-11-08 14:21 +0500
         </p>
     </div>
 </footer>

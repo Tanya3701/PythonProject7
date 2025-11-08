@@ -11,12 +11,12 @@ url = "https://api.apilayer.com/exchangerates_data/convert"
 header = {'apikey': API_KEY}
 
 
-def currency_conversion(operations: list[dict]) -> str:
+def currency_conversion(operation: dict) -> float:
     """Выводит сумму оборота транзакции, в случае, транзакции в евро и долларах, конвертирует результат в рубли"""
-    for operation in operations:
+    for key in operation:
         transaction_amount = operation.get("operationAmount").get("amount")
         if operation.get("operationAmount").get("currency").get("code") == "RUB":
-            return transaction_amount
+            return float(transaction_amount)
         elif operation.get("operationAmount").get("currency").get("code") == "USD":
             payload = {"amount": transaction_amount, "from": "USD", "to": "RUB"}
             response = requests.get(url, headers=API_KEY, params=payload)

@@ -8,7 +8,6 @@ def test_currency_conversion(mock_get):
     mock_get.return_value.json.return_value = {"result": 50}
     assert (
         currency_conversion(
-            [
                 {
                     "id": 41428829,
                     "state": "EXECUTED",
@@ -18,9 +17,9 @@ def test_currency_conversion(mock_get):
                         "currency": {"name": "USD", "code": "USD"},
                     },
                 }
-            ]
+
         )
-        == 50
+        == 50.00
     )
     mock_get.assert_called_once_with(
         "https://api.apilayer.com/exchangerates_data/convert",
