@@ -23,6 +23,6 @@ def test_currency_conversion(mock_get):
     )
     mock_get.assert_called_once_with(
         "https://api.apilayer.com/exchangerates_data/convert",
-        headers=None,
+        headers={'apikey': None},
         params={"amount": "8221.37", "from": "USD", "to": "RUB"},
     )
