@@ -1,5 +1,5 @@
 def filter_by_state(
-    list_state_info: list[dict], state_info: str = "EXECUTED"
+        list_state_info: list[dict], state_info: str = "EXECUTED"
 ) -> list[dict]:
     """Фильтр словарей по статусу"""
 
@@ -11,7 +11,7 @@ def filter_by_state(
 
 
 def sort_by_date(
-    list_state_info: list[dict], sorting_reverse: bool = True
+        list_state_info: list[dict], sorting_reverse: bool = True
 ) -> list[dict]:
     """Сортирует по дате (по умолчанию на убывание)"""
 

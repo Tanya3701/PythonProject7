@@ -21,7 +21,6 @@ def currency_conversion(operation: dict) -> float:
         response = requests.get(url, headers=header, params=payload)
         return round(response.json()["result"], 2)
     elif operation.get("operationAmount").get("currency").get("code") == "EUR":
-            payload = {"amount": transaction_amount, "from": "EUR", "to": "RUB"}
-            response = requests.get(url, headers=header, params=payload)
-            return round(response.json()['result'], 2)
-
+        payload = {"amount": transaction_amount, "from": "EUR", "to": "RUB"}
+        response = requests.get(url, headers=header, params=payload)
+        return round(response.json()['result'], 2)

@@ -11,13 +11,13 @@ def get_mask_card_number(card_number: str) -> str:
         quarter_three = card_number_list[8:12]
         quarter_four = card_number_list[12:16]
         return (
-            "".join(quarter_one)
-            + " "
-            + "".join(quarter_two)
-            + " "
-            + "".join(quarter_three)
-            + " "
-            + "".join(quarter_four)
+                "".join(quarter_one)
+                + " "
+                + "".join(quarter_two)
+                + " "
+                + "".join(quarter_three)
+                + " "
+                + "".join(quarter_four)
         )
 
 
