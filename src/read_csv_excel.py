@@ -13,3 +13,7 @@ def read_excel(xlsx_file) -> list[dict]:
     excel_file = pd.read_excel(xlsx_file)
     excel_file_list = excel_file.to_dict("records")
     return excel_file_list
+
+
+if __name__ == "__main__":
+    print(read_csv_file('data/transactions.csv'))
