@@ -27,3 +27,7 @@ def json_read_file(json_file: Any) -> list[dict[dict[dict]]]:
         operations = []
     logger.info("Файл успешно преобразован")
     return operations
+
+
+if __name__ == "__main__":
+    print(json_read_file("data/operations.json"))

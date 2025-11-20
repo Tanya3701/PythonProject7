@@ -49,27 +49,23 @@ transactions = [
         "from": "Visa Classic 6831982476737658",
         "to": "Visa Platinum 8990922113665229",
     },
-    {
-        "id": 594226727,
-        "state": "CANCELED",
-        "date": "2018-09-12T21:27:25.241689",
-        "operationAmount": {
-            "amount": "67314.70",
-            "currency": {"name": "руб.", "code": "RUB"},
-        },
-        "description": "Перевод организации",
-        "from": "Visa Platinum 1246377376343588",
-        "to": "Счет 14211924144426031657",
-    },
 ]
 
 
 def filter_by_currency(transactions_some: list[dict], currency: str) -> Any:
     """Функция фильтра данных по видам валюты"""
+    transactions_list = []
     for transaction in transactions_some:
-        key_operation = transaction.get("operationAmount").get("currency").get("code")
-        if key_operation == currency:
-            yield transaction
+        if transaction.get("operationAmount") is not None:
+            if transaction.get("operationAmount").get("currency") is not None:
+                key = transaction.get("operationAmount").get("currency").get("code")
+                if key == currency:
+                    transactions_list.append(transaction)
+        else:
+            key = transaction.get("currency_code")
+            if key == currency:
+                transactions_list.append(transaction)
+    return transactions_list
 
 
 def transaction_descriptions(transactions_some: list[dict]) -> Any:

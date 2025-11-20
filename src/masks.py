@@ -15,7 +15,7 @@ def get_mask_card_number(card_number: str) -> str:
 
     if len(card_number) != 16:
         logger.error("Неверный номер карты")
-        raise ValueError("Неверный номер карты")
+        return None
     else:
         card_number_list = list(card_number)
         card_number_list[6:12] = "******"
@@ -39,7 +39,7 @@ def get_mask_account(account: str) -> str:
     """Маскирует часть банковского счета"""
     if len(account) != 20:
         logger.error("Неверный номер счета")
-        raise ValueError("Неверный счет")
+        return None
     else:
         account_list = list(account)
         account_list[:-4] = "**"

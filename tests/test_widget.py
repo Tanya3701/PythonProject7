@@ -25,10 +25,9 @@ def test_mask_account_card(card_info: str, expected: str) -> None:
 
 def test_mask_invalid_account_card() -> None:
     """проверка исключений"""
-    with pytest.raises(ValueError):
-        mask_account_card("")
-        mask_account_card("1234")
-        mask_account_card("123456789123456789123456789123456")
+    assert mask_account_card("") == " - не определен"
+    assert mask_account_card("1234") == " - не определен"
+    assert mask_account_card("123456789123456789123456789123456") == " - не определен"
 
 
 @pytest.mark.parametrize(

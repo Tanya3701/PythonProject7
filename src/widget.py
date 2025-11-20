@@ -10,12 +10,12 @@ def mask_account_card(card_info: str) -> str:
 
     from src.masks import get_mask_account, get_mask_card_number
 
-    if len(card_number_info) != 16 and len(card_number_info) != 20:
-        raise ValueError("Неверный номер карты или счета")
-    elif len(card_number_info) == 16:
+    if len(card_number_info) == 16:
         card_number_type = get_mask_card_number(card_number_info)
-    else:
+    elif len(card_number_info) == 20:
         card_number_type = get_mask_account(card_number_info)
+    else:
+        card_number_type = " - не определен"
     return type_info + card_number_type
 
 
