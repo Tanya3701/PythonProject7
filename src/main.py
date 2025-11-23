@@ -18,26 +18,12 @@ def main():
     if answer == "1":
         print("Для обработки выбран JSON-файл.")
         choice = json_read_file("data/operations.json")
-        for transaction in choice:
-            if transaction.get("operationAmount") is not None:
-                amount = transaction.get("operationAmount").get("amount")
-            if transaction.get("operationAmount") is not None:
-                if transaction.get("currency") is None:
-                    currency_name = (
-                        transaction.get("operationAmount").get("currency").get("name")
-                    )
     elif answer == "2":
         print("Для обработки выбран CSV-файл.")
         choice = read_csv_file("data/transactions.csv")
-        for transaction in choice:
-            amount = transaction.get("amount")
-            currency_name = transaction.get("currency_name")
     elif answer == "3":
         print("Для обработки выбран XLSX-файл.")
         choice = read_excel("data/transactions_excel.xlsx")
-        for transaction in choice:
-            amount = transaction.get("amount")
-            currency_name = transaction.get("currency_name")
 
     print("Введите статус, по которому необходимо выполнить фильтрацию.")
     print("Доступные для фильтровки статусы:")
@@ -87,6 +73,7 @@ def main():
         print("Неверный ввод данных!")
         print("Выводить только рублевые транзакции? Да/Нет")
         print('Введите пожалуйста "Да" или "Нет"')
+        choice_rub = input()
     if choice_rub.title() == "Да":
         sort_currency = filter_by_currency(sort_date, "RUB")
     elif choice_rub.title() == "Нет":
@@ -112,12 +99,22 @@ def main():
 
     if len(filter_transactions) > 0:
         for transaction in filter_transactions:
+            if transaction.get("operationAmount") is not None:
+                amount = transaction.get("operationAmount").get("amount")
+            if transaction.get("operationAmount") is not None:
+                if transaction.get("currency") is None:
+                    currency_name = (
+                        transaction.get("operationAmount").get("currency").get("name")
+                    )
+            else:
+                amount = transaction.get("amount")
+                currency_name = transaction.get("currency_name")
             date = get_date(transaction.get("date"))
             sender_card = mask_account_card(str(transaction.get("from")))
             recipient = mask_account_card(str(transaction.get("to")))
             print(f"\n{date} {transaction.get('description')}")
             print(f"{sender_card} -> {recipient}")
-            print(f"Сумма: {int(amount)} {currency_name}")
+            print(f"Сумма: {amount} {currency_name}")
     else:
         print("Не найдено ни одной транзакции, подходящей под ваши условия фильтрации")
     return

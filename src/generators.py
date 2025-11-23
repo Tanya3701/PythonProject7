@@ -52,7 +52,7 @@ transactions = [
 ]
 
 
-def filter_by_currency(transactions_some: list[dict], currency: str) -> Any:
+def filter_by_currency(transactions_some: list[dict], currency: str = "RUB") -> Any:
     """Функция фильтра данных по видам валюты"""
     transactions_list = []
     for transaction in transactions_some:

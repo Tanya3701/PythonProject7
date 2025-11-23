@@ -18,9 +18,9 @@ def test_get_mask_card_number(card_number: str, expected: str) -> None:
 
 def test_get_mask_card_number_invalid_card_number() -> None:
     """Тестирование исключений"""
-    assert get_mask_card_number("") == None
-    assert get_mask_card_number("68319824767376589") == None
-    assert get_mask_card_number("6831") == None
+    assert get_mask_card_number("") is None
+    assert get_mask_card_number("68319824767376589") is None
+    assert get_mask_card_number("6831") is None
 
 
 @pytest.mark.parametrize(
@@ -38,5 +38,5 @@ def test_get_mask_account(account: str, expected: str) -> None:
 
 def test_get_mask_invalid_account() -> None:
     """Проверка исключений"""
-    assert get_mask_account("") == None
-    assert get_mask_account("3538303") == None
+    assert get_mask_account("") is None
+    assert get_mask_account("3538303") is None
