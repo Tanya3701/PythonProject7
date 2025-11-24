@@ -37,10 +37,10 @@ pip-log.txt
 pip-delete-this-directory.txt
 
 # Unit test / coverage reports
-htmlcov/
+#htmlcov/
 .tox/
 .nox/
-.coverage
+#.coverage
 .coverage.*
 .cache
 nosetests.xml
@@ -56,7 +56,7 @@ cover/
 *.pot
 
 # Django stuff:
-*.log
+#*.log
 local_settings.py
 db.sqlite3
 db.sqlite3-journal
@@ -148,7 +148,7 @@ activemq-data/
 *.sage.py
 
 # Environments
-.env
+src/.env
 .envrc
 .venv
 env/
