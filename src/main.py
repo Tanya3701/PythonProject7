@@ -17,13 +17,13 @@ def main():
     answer = input("Введите номер интересующей информации:  ")
     if answer == "1":
         print("Для обработки выбран JSON-файл.")
-        choice = json_read_file("data/operations.json")
+        choice = json_read_file(r"../data/operations.json")
     elif answer == "2":
         print("Для обработки выбран CSV-файл.")
-        choice = read_csv_file("data/transactions.csv")
+        choice = read_csv_file(r"../data/transactions.csv")
     elif answer == "3":
         print("Для обработки выбран XLSX-файл.")
-        choice = read_excel("data/transactions_excel.xlsx")
+        choice = read_excel(r"../data/transactions_excel.xlsx")
 
     print("Введите статус, по которому необходимо выполнить фильтрацию.")
     print("Доступные для фильтровки статусы:")

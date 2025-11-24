@@ -5,7 +5,7 @@ from typing import Any
 
 logger = logging.getLogger("utils.py")
 file_handler = logging.FileHandler(
-    filename=r"../utils.log", encoding="utf-8", mode="w"
+    filename='../logs/utils.log', encoding="utf-8", mode="w"
 )
 formatter = logging.Formatter("%(asctime)s - %(name)s - %(levelname)s - %(message)s")
 file_handler.setFormatter(formatter)
@@ -31,4 +31,4 @@ def json_read_file(json_file: Any) -> list[dict[dict[dict]]]:
 
 
 if __name__ == "__main__":
-    print(json_read_file("data/operations.json"))
+    print(json_read_file(r"../data/operations.json"))

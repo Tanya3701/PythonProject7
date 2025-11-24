@@ -15,7 +15,7 @@ def mask_account_card(card_info: str) -> str:
     elif len(card_number_info) == 20:
         card_number_type = get_mask_account(card_number_info)
     else:
-        card_number_type = " - не определен"
+        card_number_type = ""
     return type_info + card_number_type
 
 
